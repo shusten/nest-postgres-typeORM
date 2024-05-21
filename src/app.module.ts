@@ -16,7 +16,7 @@ import { UsersModule } from './users/users.module';
       synchronize: true,
       logging: false,
       //migrations: [__dirname + '/database/migrations/*{.js,.ts'],
-      entities: [__dirname + '/**/*.entity{.js,.ts'],
+      entities: [__dirname + '/**/*.entity{.js,.ts}'],
     }),
     UsersModule,
   ],
