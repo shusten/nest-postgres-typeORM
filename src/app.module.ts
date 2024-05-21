@@ -17,7 +17,7 @@ import { AppService } from './app.service';
       password: process.env.DB_PASSWORD,
       synchronize: true,
       logging: false,
-      migrations: [__dirname + '/database/migrations/*{.js,.ts'],
+      //migrations: [__dirname + '/database/migrations/*{.js,.ts'],
       entities: [__dirname + '/**/*.entity{.js,.ts'],
     }),
   ],
