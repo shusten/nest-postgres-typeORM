@@ -2,6 +2,7 @@ import { Body, Controller, Get, Post, Res } from '@nestjs/common';
 import { UsersService } from './users.service';
 import { Response } from 'express';
 import { UsersDto } from './users.dto.ts';
+import { Users } from './user.entity';
 
 @Controller('users')
 export class UsersController {
@@ -10,8 +11,9 @@ export class UsersController {
     ) {}
 
     @Get()
-    findAllUsers(@Res() response: Response) {
-        return response.status(200).json(this.usersService.findAllUsers());
+    async findAllUsers(@Res() response: Response) {
+        const users = await this.usersService.findAllUsers()
+        return response.status(200).json(users);
     }
 
     @Post()
